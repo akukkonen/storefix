@@ -23,6 +23,34 @@ Write a blog post for the AccessFix Astro website about: $ARGUMENTS
 5. Include internal links to `/support` or other posts where relevant
 6. End with a CTA mentioning AccessFix
 
+## Content pillars
+
+If the topic is vague, pick from these pillars. Every post should tie back to at least one.
+
+**1. Legal risk & compliance** — ADA lawsuits (4,000+ in 2023), EAA enforcement (June 2025), AODA, fines. Target merchants who don't know they're exposed.
+- "Can my Shopify store get sued for accessibility?"
+- "European Accessibility Act: what Shopify merchants need to know"
+- "ADA web accessibility lawsuits hit record numbers — is your store next?"
+
+**2. Overlay widgets don't work** — Courts ruling overlays insufficient, technical limitations, false sense of security. AccessFix's core differentiator.
+- "Why accessibility overlays won't protect you from a lawsuit"
+- "accessiBe vs real accessibility fixes: what the courts say"
+
+**3. Practical Shopify fixes** — Step-by-step guides for common issues. Shows expertise, captures long-tail SEO.
+- "How to add alt text to all product images in Shopify"
+- "Fixing color contrast issues in your Dawn theme"
+- "Making your Shopify navigation keyboard-accessible"
+
+**4. Business case** — Revenue from the 15% of users with disabilities, SEO benefits of accessibility, brand trust.
+- "You're losing 15% of customers — and you don't even know it"
+- "How accessibility improvements boost your Shopify SEO"
+
+**5. WCAG explained simply** — Demystify standards for non-technical merchants.
+- "WCAG 2.1 AA for Shopify merchants: the plain English version"
+- "The 5 most common accessibility issues on Shopify stores"
+
+Prioritize pillars 1-3 — they have the strongest search intent and conversion potential.
+
 ## Writing style — CRITICAL
 
 Write like a knowledgeable person sharing what they know, NOT like an AI generating content. Follow these rules strictly:
