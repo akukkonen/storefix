@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Blog — AccessFix" description="Accessibility tips, WCAG guides, and Shopify compliance updates from AccessFix.">
+  <div class="blog-listing">
+    <h1>Blog</h1>
+    <p class="blog-subtitle">Accessibility tips, compliance updates, and Shopify guides.</p>
+
+    {posts.length === 0 && (
+      <p class="empty">No posts yet. Check back soon.</p>
+    )}
+
+    <div class="post-list">
+      {posts.map((post) => (
+        <a href={`/blog/${post.id}`} class="post-card">
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          <h2>{post.data.title}</h2>
+          <p>{post.data.description}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .blog-listing {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .blog-listing h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+  .blog-subtitle {
+    font-size: 1.05rem;
+    color: var(--fg-muted);
+    margin-bottom: 40px;
+  }
+  .empty {
+    color: var(--fg-faint);
+    font-size: 0.95rem;
+  }
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .post-card {
+    display: block;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s;
+  }
+  .post-card:hover {
+    border-color: var(--fg-faint);
+  }
+  .post-card time {
+    font-size: 0.8rem;
+    color: var(--fg-faint);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .post-card h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .post-card p {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.5;
+  }
+</style>

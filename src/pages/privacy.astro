@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy — AccessFix" description="AccessFix privacy policy. What data we collect, how we use it, and how we protect it.">
+  <article class="legal-page">
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective Date: March 7, 2026</p>
+
+    <p>AccessFix ("we", "our", "the app") is a Shopify app that scans merchant storefronts for WCAG 2.2 AA accessibility violations and provides fix instructions. This privacy policy explains what data we collect, how we use it, and how we protect it.</p>
+
+    <h2>What Data We Collect</h2>
+
+    <h3>1. Shopify Session Data</h3>
+    <p>When you install AccessFix, we store your <strong>shop domain, session state, and access token</strong> in our database. This is required for all Shopify embedded apps to maintain your authenticated session. We only request the following API scopes:</p>
+    <ul role="list">
+      <li><code>read_products</code> — to identify product pages for scanning</li>
+      <li><code>read_themes</code> — to provide theme-specific fix instructions</li>
+    </ul>
+    <p>We do not request write access to your store.</p>
+
+    <h3>2. Storefront Page Content</h3>
+    <p>When you run a scan, we use a headless browser (Puppeteer) to load your <strong>publicly accessible</strong> storefront pages and analyze their HTML structure for accessibility issues using axe-core. Pages scanned include:</p>
+    <ul role="list">
+      <li>Homepage</li>
+      <li>Collection pages</li>
+      <li>Product pages (up to 10)</li>
+      <li>Cart page</li>
+      <li>Informational pages (about, contact, policy pages)</li>
+    </ul>
+    <p><strong>We do NOT scan Shopify checkout pages.</strong> Checkout is fully controlled and hosted by Shopify, and merchants cannot modify its HTML or accessibility.</p>
+    <p><strong>We do NOT collect any customer or visitor data.</strong> We only analyze the HTML structure of your pages — we do not interact with forms, capture user inputs, track visitors, or set cookies on your storefront.</p>
+
+    <h3>3. Scan Results</h3>
+    <p>For each scan, we store the following in our database:</p>
+    <ul role="list">
+      <li>Scanned URLs</li>
+      <li>Compliance score and violation counts by severity</li>
+      <li>Individual violation details: CSS selector, HTML snippet of the offending element, page URL, axe rule ID, and generated fix instructions</li>
+    </ul>
+
+    <h3>4. What We Do NOT Collect</h3>
+    <ul role="list">
+      <li>Personal data of your customers or store visitors</li>
+      <li>Email addresses beyond what Shopify provides through the install flow</li>
+      <li>Analytics or browsing behavior</li>
+      <li>Cookies on your storefront</li>
+      <li>Payment or financial information (billing is handled entirely by Shopify)</li>
+    </ul>
+
+    <h2>How We Use Your Data</h2>
+    <p>We use the data we collect solely to:</p>
+    <ul role="list">
+      <li>Authenticate your session within the Shopify Admin</li>
+      <li>Scan your storefront pages for accessibility violations</li>
+      <li>Generate fix instructions tailored to your Shopify theme</li>
+      <li>Display scan results, compliance scores, and fix guidance in the app</li>
+      <li>Manage your subscription plan through Shopify's billing system</li>
+    </ul>
+    <p>We do not use your data for advertising, profiling, or any purpose unrelated to providing the AccessFix service.</p>
+
+    <h2>Third-Party Services</h2>
+
+    <h3>Anthropic Claude API</h3>
+    <p>For uncommon or complex accessibility violations, we send <strong>violation details only</strong> (HTML snippets and axe rule descriptions) to the Anthropic Claude API to generate Shopify-specific fix instructions. <strong>No merchant personally identifiable information or customer data is sent to this service.</strong> The majority of common violations use pre-written templates and do not trigger any external API call.</p>
+
+    <h3>Shopify Billing API</h3>
+    <p>We use Shopify's managed billing for the Fix plan ($19.99/month). All payment processing is handled entirely by Shopify. We do not store or process any payment information.</p>
+
+    <h3>Infrastructure</h3>
+    <p>Your data is stored in a PostgreSQL database hosted on our servers. We do not share your database with other applications or services.</p>
+
+    <h2>Data Retention</h2>
+    <ul role="list">
+      <li><strong>Scan results and violation data</strong> are retained as long as you have the app installed, so you can track your accessibility progress over time.</li>
+      <li><strong>Session data</strong> is retained as long as the app is installed on your store.</li>
+    </ul>
+
+    <h2>Data Deletion</h2>
+    <p>You can request deletion of all your data at any time by contacting us at <a href="mailto:arttukoo@gmail.com">arttukoo@gmail.com</a>.</p>
+    <p>We also handle Shopify's mandatory GDPR/privacy webhooks:</p>
+    <ul role="list">
+      <li><strong>Customer Data Request</strong> — AccessFix does not store customer data, so these requests return no data.</li>
+      <li><strong>Customer Data Erasure</strong> — AccessFix does not store customer data, so no action is needed.</li>
+      <li><strong>Shop Data Erasure</strong> — When received (typically after app uninstall), we delete all scan results, violation records, and session data associated with your shop.</li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>We take reasonable measures to protect your data, including:</p>
+    <ul role="list">
+      <li>All communication between the app and Shopify uses HTTPS/TLS encryption</li>
+      <li>Access tokens are stored securely in our database</li>
+      <li>The app runs embedded within the Shopify Admin using Shopify's OAuth authentication</li>
+      <li>We do not inject any JavaScript, widgets, or code into your storefront</li>
+    </ul>
+
+    <h2>Storefront Impact</h2>
+    <p>AccessFix does <strong>not</strong> modify your storefront in any way. The app:</p>
+    <ul role="list">
+      <li>Does not inject JavaScript or overlay widgets</li>
+      <li>Does not add any code to your theme</li>
+      <li>Does not affect your store's performance or visitor experience</li>
+      <li>Only reads publicly accessible page content during scans</li>
+    </ul>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. If we make significant changes, we will notify you through the app. The effective date at the top of this page indicates when the policy was last updated.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this privacy policy or want to request data deletion, contact us at <a href="mailto:arttukoo@gmail.com">arttukoo@gmail.com</a>.</p>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .legal-page h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .effective-date {
+    font-size: 0.875rem;
+    color: var(--fg-faint);
+    margin-bottom: 32px;
+  }
+  .legal-page h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  .legal-page h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  .legal-page p {
+    font-size: 0.95rem;
+    color: var(--fg-muted);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .legal-page ul {
+    margin-bottom: 12px;
+    padding-left: 20px;
+  }
+  .legal-page li {
+    font-size: 0.95rem;
+    color: var(--fg-muted);
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .legal-page a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .legal-page a:hover {
+    color: var(--accent-hover);
+  }
+  .legal-page code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .legal-page strong {
+    color: var(--fg);
+  }
+</style>

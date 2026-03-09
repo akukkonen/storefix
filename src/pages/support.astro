@@ -1,0 +1,386 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Support — AccessFix" description="Get help with AccessFix. Setup guide, FAQ, and troubleshooting for your Shopify accessibility scanner.">
+  <div class="support-page">
+
+    <div class="support-header">
+      <h1>Support</h1>
+      <p class="support-subtitle">Everything you need to get started with AccessFix and fix accessibility issues on your Shopify store.</p>
+      <p class="support-contact">Need direct help? Email <a href="mailto:arttukoo@gmail.com">arttukoo@gmail.com</a> — we respond within 24 hours.</p>
+    </div>
+
+    <!-- SETUP GUIDE -->
+    <section aria-labelledby="setup-heading">
+      <h2 id="setup-heading">Setup Guide</h2>
+
+      <div class="guide-steps">
+        <div class="guide-step">
+          <span class="guide-number">1</span>
+          <div>
+            <h3>Install AccessFix</h3>
+            <p>Install AccessFix from the Shopify App Store. The app opens embedded inside your Shopify Admin — no separate login required.</p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-number">2</span>
+          <div>
+            <h3>Run Your First Scan</h3>
+            <p>Open AccessFix from the Apps section in your Shopify Admin. Click "Run Your First Scan" and wait 1-3 minutes while AccessFix scans up to 20 pages on your storefront.</p>
+            <p class="guide-note"><strong>Password-protected stores:</strong> Enter your store password in the "Store password" field before scanning. Find it in Shopify Admin > Online Store > Preferences.</p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-number">3</span>
+          <div>
+            <h3>Review Your Results</h3>
+            <p>After the scan completes, you'll see your compliance score (0-100), issue counts by severity (Critical, Serious, Minor), and your top issues. Click "View all issues" to see every violation.</p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-number">4</span>
+          <div>
+            <h3>Fix Issues</h3>
+            <p>Each issue card shows its severity, difficulty level, and whether it's a Quick Win. Expand an issue to see:</p>
+            <ul role="list">
+              <li><strong>Fix without code</strong> — Step-by-step instructions using the Shopify Theme Editor</li>
+              <li><strong>Fix with code</strong> — Liquid/CSS snippets with the exact file to edit</li>
+              <li><strong>Where this appears</strong> — Which elements and pages are affected</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-number">5</span>
+          <div>
+            <h3>Verify Your Fixes</h3>
+            <p>After making changes, click "I've fixed this" on each issue. Then go back to the Dashboard and click "Scan Again" to verify your fixes and see your updated score.</p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <span class="guide-number">6</span>
+          <div>
+            <h3>Upgrade (Optional)</h3>
+            <p>The free plan shows fix instructions for your top 3 issues. Need to fix more? Go to Settings and click "Upgrade to Fix Plan" ($19.99/month) to unlock all fix instructions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tips-box">
+        <h3>Tips</h3>
+        <ul role="list">
+          <li><strong>Start with Quick Wins</strong> — Marked with a green badge, these give you the most improvement for the least effort</li>
+          <li><strong>Fix critical issues first</strong> — These block some users from accessing your store entirely</li>
+          <li><strong>Scan regularly</strong> — After theme changes or store updates, run a new scan to catch new issues</li>
+          <li><strong>No coding skills needed</strong> — Many issues have "Fix without code" options using the visual Theme Editor</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+      <div class="faq-group">
+        <h3>Getting Started</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What does AccessFix do?</summary>
+            <p class="faq-a">AccessFix scans your Shopify storefront for WCAG 2.2 AA accessibility violations and provides step-by-step instructions to fix them in your Shopify theme. Unlike overlay widgets, AccessFix identifies real issues in your code and tells you exactly how to fix them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does AccessFix modify my store or theme code?</summary>
+            <p class="faq-a">No. AccessFix only reads your publicly accessible storefront pages during a scan. It does not inject any JavaScript, modify your theme files, or affect your store's performance in any way.</p>
+          </details>
+          <details class="faq-item">
+            <summary>My store has a password page. Can I still scan?</summary>
+            <p class="faq-a">If your store is password-protected (common for development stores), enter your store password in the "Store password" field before scanning. You can find this password in your Shopify Admin under Online Store > Preferences.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <h3>Scan Results</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is the compliance score?</summary>
+            <p class="faq-a">Your compliance score is a number from 0 to 100 that reflects how well your storefront meets WCAG 2.2 AA standards. A higher score means fewer accessibility issues. Critical issues reduce your score more than minor ones.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What do the severity levels mean?</summary>
+            <div class="faq-a">
+              <p><strong>Critical</strong> — Blocks some users from accessing content entirely (e.g., images with no alt text that screen readers cannot describe)</p>
+              <p><strong>Serious</strong> — Creates significant barriers (e.g., poor color contrast that makes text hard to read)</p>
+              <p><strong>Moderate</strong> — Causes difficulty but doesn't fully block access</p>
+              <p><strong>Minor</strong> — Small improvements that enhance the experience</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What is a "Quick Win"?</summary>
+            <p class="faq-a">Quick Wins are issues that are easy to fix and affect many parts of your store. Fixing these first gives you the biggest improvement for the least effort.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <h3>Fix Instructions</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What if I'm not comfortable editing code?</summary>
+            <p class="faq-a">Many issues have a "Fix without code" option that guides you through the Shopify Theme Editor's visual interface. For code-level fixes, you can share the instructions with a developer or Shopify Expert.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do the fix instructions work with my theme?</summary>
+            <p class="faq-a">Fix instructions are tailored to work with Shopify themes. If your store uses the Dawn theme (or a theme based on Dawn), the instructions will reference the exact files and settings. For other themes, the general approach is the same but file names may vary slightly.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <h3>Plans and Billing</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What's included in the free plan?</summary>
+            <p class="faq-a">The free plan includes a full scan of up to 20 pages, your compliance score, all violations with severity levels, and fix instructions for your top 3 issues.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does the Fix plan include?</summary>
+            <p class="faq-a">The Fix plan ($19.99/month) unlocks fix instructions for all issues found on your store, including detailed code snippets for every violation.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I cancel anytime?</summary>
+            <p class="faq-a">Yes. You can cancel the Fix plan at any time from the Settings page or from your Shopify Admin under Settings > Billing. Your existing scan results remain accessible on the free plan.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <h3>Privacy and Data</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What data does AccessFix collect?</summary>
+            <p class="faq-a">AccessFix stores your Shopify session data (required for all embedded apps) and scan results (violation details, compliance scores). We do not collect any data about your customers or store visitors. See our <a href="/privacy">full privacy policy</a> for details.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens to my data if I uninstall?</summary>
+            <p class="faq-a">When you uninstall AccessFix, all your scan results, violation records, and session data are deleted from our servers.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="faq-group">
+        <h3>Troubleshooting</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>My scan is stuck or failed</summary>
+            <div class="faq-a">
+              <p>Make sure your storefront is accessible (not behind a password page, or enter the password before scanning). Scans can take up to 3 minutes for stores with many pages. If a scan is stuck for more than 10 minutes, it will automatically be marked as failed. Try scanning again.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>I don't see any violations but my store has issues</summary>
+            <p class="faq-a">AccessFix uses automated scanning which catches the most common WCAG 2.2 AA violations. Some issues (like keyboard trap behaviors or complex interaction patterns) may require manual testing. Automated tools typically catch 30-40% of all accessibility issues.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .support-page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* Header */
+  .support-header {
+    margin-bottom: 48px;
+  }
+  .support-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .support-subtitle {
+    font-size: 1.05rem;
+    color: var(--fg-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .support-contact {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+  }
+  .support-contact a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .support-contact a:hover { color: var(--accent-hover); }
+
+  /* Sections */
+  section {
+    margin-bottom: 56px;
+  }
+  section > h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Guide Steps */
+  .guide-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .guide-step {
+    display: flex;
+    gap: 16px;
+  }
+  .guide-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .guide-step h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .guide-step p {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .guide-note {
+    font-size: 0.85rem;
+    color: var(--fg-faint);
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .guide-note strong { color: var(--fg); }
+  .guide-step ul {
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+  .guide-step li {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .guide-step li strong { color: var(--fg); }
+
+  /* Tips box */
+  .tips-box {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .tips-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .tips-box ul {
+    padding-left: 18px;
+  }
+  .tips-box li {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  .tips-box li strong { color: var(--fg); }
+
+  /* FAQ */
+  .faq-group {
+    margin-bottom: 32px;
+  }
+  .faq-group h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-item:first-child {
+    border-top: 1px solid var(--border);
+  }
+  .faq-item summary {
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--fg-faint);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+  .faq-a {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    line-height: 1.6;
+    padding-bottom: 16px;
+  }
+  .faq-a p {
+    margin-bottom: 8px;
+  }
+  .faq-a p:last-child {
+    margin-bottom: 0;
+  }
+  .faq-a strong { color: var(--fg); }
+  .faq-a a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .faq-a a:hover { color: var(--accent-hover); }
+</style>

@@ -1,0 +1,125 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+}
+
+const { title, description, date } = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout title={`${title} — AccessFix`} description={description}>
+  <article class="blog-post">
+    <header class="post-header">
+      <a href="/blog" class="back-link">&larr; Back to blog</a>
+      <h1>{title}</h1>
+      <time datetime={date.toISOString()}>{formattedDate}</time>
+    </header>
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .blog-post {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .post-header {
+    margin-bottom: 40px;
+  }
+  .back-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--fg-muted);
+    margin-bottom: 24px;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--fg); }
+  .post-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .post-header time {
+    font-size: 0.875rem;
+    color: var(--fg-faint);
+  }
+  .post-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--fg);
+  }
+  .post-content :global(h2) {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  .post-content :global(h3) {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  .post-content :global(p) {
+    margin-bottom: 16px;
+  }
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+  .post-content :global(li) {
+    margin-bottom: 8px;
+  }
+  .post-content :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .post-content :global(a:hover) {
+    color: var(--accent-hover);
+  }
+  .post-content :global(code) {
+    font-family: var(--mono);
+    font-size: 0.9em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .post-content :global(pre) {
+    background: var(--surface-2);
+    color: var(--fg);
+    padding: 20px;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .post-content :global(pre code) {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+  }
+  .post-content :global(blockquote) {
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    margin: 16px 0;
+    color: var(--fg-muted);
+  }
+  .post-content :global(img) {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 16px 0;
+  }
+</style>
