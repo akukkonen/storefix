@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 48" fill="none">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse" gradientTransform="rotate(150)">
       <stop offset="0%" stop-color="#0f766e"/>
-      <stop offset="100%" stop-color="#134e4a"/>
+      <stop offset="100%" stop-color="#0d5c56"/>
     </linearGradient>
   </defs>
   <!-- Icon -->
   <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#bg)"/>
-  <text x="5" y="38" font-family="Outfit, sans-serif" font-weight="500" font-size="34" fill="rgba(255,255,255,0.55)" letter-spacing="-1.5">S</text>
+  <text x="3" y="38" font-family="Outfit, sans-serif" font-weight="500" font-size="34" fill="rgba(255,255,255,0.48)" letter-spacing="-1.5">A</text>
   <text x="25" y="38" font-family="Outfit, sans-serif" font-weight="800" font-size="34" fill="#ffffff" letter-spacing="-1.5">F</text>
   <!-- Wordmark -->
-  <text x="60" y="35" font-family="Outfit, sans-serif" font-size="28" letter-spacing="-1" fill="#e8e8ec">
-    <tspan font-weight="500">Store</tspan><tspan font-weight="800">Fix</tspan>
+  <text x="60" y="35" font-family="Outfit, sans-serif" font-size="28" letter-spacing="-0.6" fill="#e8e8ec">
+    <tspan font-weight="700">Access</tspan><tspan font-weight="700" opacity="0.45">Fix</tspan>
   </text>
 </svg>

@@ -17,7 +17,7 @@ const { title, description = 'Scan your Shopify store for accessibility violatio
   <link rel="icon" type="image/svg+xml" href="/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
   <script is:inline>
     (function() {
       var stored = localStorage.getItem('theme');
@@ -52,7 +52,13 @@ const { title, description = 'Scan your Shopify store for accessibility violatio
 
   <!-- NAV -->
   <nav aria-label="Main">
-    <a href="/" class="logo">Access<span>Fix</span></a>
+    <a href="/" class="logo">
+      <svg class="logo-icon" aria-hidden="true" width="28" height="28" viewBox="0 0 120 120" fill="none">
+        <defs><linearGradient id="logo-bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse" gradientTransform="rotate(150)"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#0d5c56"/></linearGradient></defs>
+        <rect width="120" height="120" rx="30" fill="url(#logo-bg)"/>
+        <text x="8" y="90" font-family="Outfit, sans-serif" font-weight="500" font-size="86" fill="rgba(255,255,255,0.48)" letter-spacing="-4">A</text>
+        <text x="60" y="90" font-family="Outfit, sans-serif" font-weight="800" font-size="86" fill="#ffffff" letter-spacing="-4">F</text>
+      </svg>AccessFix</a>
     <div class="nav-links">
       <a href="/blog" class="nav-link">Blog</a>
       <a href="/support" class="nav-link">Support</a>
@@ -203,13 +209,17 @@ const { title, description = 'Scan your Shopify store for accessibility violatio
     padding: 20px 24px;
   }
   .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--fg);
     text-decoration: none;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.6px;
   }
-  .logo span { color: var(--accent); }
+  .logo-icon { flex-shrink: 0; border-radius: 7px; }
   .nav-links {
     display: flex;
     align-items: center;
