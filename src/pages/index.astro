@@ -756,7 +756,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       btn.textContent = 'Joining...';
 
       try {
-        const res = await fetch('https://formsubmit.co/ajax/arttukoo@gmail.com', {
+        const res = await fetch('https://formsubmit.co/ajax/support@getaccessfix.app', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({ email, _subject: 'New AccessFix Waitlist Signup' })
@@ -766,7 +766,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       } catch {
         btn.disabled = false;
         btn.innerHTML = originalHTML;
-        window.location.href = 'mailto:arttukoo@gmail.com?subject=AccessFix%20Waitlist&body=Please%20add%20me%20to%20the%20waitlist.%20My%20email%3A%20' + encodeURIComponent(email);
+        window.location.href = 'mailto:support@getaccessfix.app?subject=AccessFix%20Waitlist&body=Please%20add%20me%20to%20the%20waitlist.%20My%20email%3A%20' + encodeURIComponent(email);
       }
     });
   });
